@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import AlertButton from './AlertButton';
 import './App.css';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        <AlertButton />
       </header>
     </div>
   );
