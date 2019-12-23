@@ -1,5 +1,10 @@
 import React from 'react';
 
-const AlertButton: React.FC = () => <button onClick={() => alert('hello')}>BOO</button>
+const onClickHandler = () => {
+    console.log('hello');
+    alert('fanks');
+} 
+
+const AlertButton: React.FC = () => <button onClick={onClickHandler}>BOO</button>
 
 export default AlertButton;
