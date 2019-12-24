@@ -5,6 +5,6 @@ const onClickHandler = () => {
     alert('fanks');
 } 
 
-const AlertButton: React.FC = () => <button onClick={onClickHandler}>BOO</button>
+const AlertButton: React.FC = () => <button className="" onClick={onClickHandler}>BOO</button>
 
 export default AlertButton;
