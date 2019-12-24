@@ -1,10 +1,15 @@
 import React from 'react';
 
-const onClickHandler = () => {
-    console.log('hello');
-    alert('fanks');
-} 
+interface Message {
+    display: String,
+    console: String 
+}
 
-const AlertButton: React.FC = () => <button className="btn btn-secondary" onClick={onClickHandler}>BOO</button>
+const onClickHandler = (message: Message) => {
+    console.log(message.console);
+    alert(message.display);
+} 
+const defaultMessage = { display: "Merry Xmax Cobba!", console: "SOME_OTHER_THING"};
+const AlertButton: React.FC = () => <button className="btn btn-secondary" onClick={() => onClickHandler(defaultMessage)}>BOO</button>
 
 export default AlertButton;
