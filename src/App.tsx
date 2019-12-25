@@ -8,7 +8,10 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={grover} alt="logo" />
-        <AlertButton />
+        <div className="alert_button_container">
+          <AlertButton />
+        </div>
+        
       </header>
     </div>
   );
