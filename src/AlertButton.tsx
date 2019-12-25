@@ -5,10 +5,18 @@ interface Message {
     console: String 
 }
 
-const defaultMessage = { display: "Merry Xmax Cobba!", console: "SOME_OTHER_THING"};
+const xmasMessage = { display: "Merry Xmax Cobba!", console: "SOME_OTHER_THING"};
+const easterMessage = { display: "Happy Easter you dangerous freak!", console: "EASTER_INIT"};
+const newYearsEveMessage = { display: "HAPPY FRICKEN NEW YEAR!", console: "ARBITARY_ENJOYMENT_DATE"};
+
+const messagesArray = [
+    xmasMessage,
+    easterMessage,
+    newYearsEveMessage
+];
 
 const getAlert = () : Message => {
-    return defaultMessage;
+    return messagesArray[Math.floor(Math.random() * Math.floor(messagesArray.length))];
 }
 
 const onClickHandler = () => {
