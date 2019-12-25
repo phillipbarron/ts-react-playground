@@ -25,6 +25,6 @@ const onClickHandler = () => {
     alert(message.display);
 }
 
-const AlertButton: React.FC = () => <button className="btn btn-secondary" onClick={() => onClickHandler()}>BOO</button>
+const AlertButton: React.FC = () => <button className="btn btn-primary" onClick={() => onClickHandler()}>BOO</button>
 
 export default AlertButton;
