@@ -5,11 +5,18 @@ interface Message {
     console: String 
 }
 
-const onClickHandler = (message: Message) => {
+const defaultMessage = { display: "Merry Xmax Cobba!", console: "SOME_OTHER_THING"};
+
+const getAlert = () : Message => {
+    return defaultMessage;
+}
+
+const onClickHandler = () => {
+    const message = getAlert();
     console.log(message.console);
     alert(message.display);
-} 
-const defaultMessage = { display: "Merry Xmax Cobba!", console: "SOME_OTHER_THING"};
-const AlertButton: React.FC = () => <button className="btn btn-secondary" onClick={() => onClickHandler(defaultMessage)}>BOO</button>
+}
+
+const AlertButton: React.FC = () => <button className="btn btn-secondary" onClick={() => onClickHandler()}>BOO</button>
 
 export default AlertButton;
