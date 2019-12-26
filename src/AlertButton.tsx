@@ -19,12 +19,22 @@ const getAlert = () : Message => {
     return messagesArray[Math.floor(Math.random() * Math.floor(messagesArray.length))];
 }
 
-const onClickHandler = () => {
+const clickHandler = (onClickHandler: (message: String) => any ): void => {
     const message = getAlert();
-    console.log(message.console);
-    alert(message.display);
+    console.log(onClickHandler(message.display)(message.display));
 }
 
-const AlertButton: React.FC = () => <button className="btn btn-primary" onClick={() => onClickHandler()}>BOO</button>
+type AlertProps = {
+    click: (message: String) => void
+}
+
+const AlertButton: React.FC<AlertProps> =
+    ( { click } ) =>
+        <button 
+            className="btn btn-primary" 
+            onClick={() => clickHandler(click)}
+        >
+            BOO
+        </button>
 
 export default AlertButton;
