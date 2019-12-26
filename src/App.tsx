@@ -3,8 +3,6 @@ import grover from './grover.webp'
 import AlertButton from './AlertButton';
 import './App.css';
 
-
-
 const App: React.FC = () => {
   const [showMessage, setShowMessage] = useState<String>("");
   const toggleMessage = (message: String) => {
