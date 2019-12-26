@@ -15,15 +15,14 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={grover} alt="logo" />
+        <div className="alert_button_container">
+          <AlertButton click={() => toggleMessage}/>
+        </div>
         {showMessage &&
           <div>
             {showMessage}
           </div>
         }
-        <div className="alert_button_container">
-          <AlertButton click={() => toggleMessage}/>
-        </div>
-
       </header>
     </div>
   );

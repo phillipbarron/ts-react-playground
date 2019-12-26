@@ -19,7 +19,7 @@ const getMessage = () : Message => {
     return messagesArray[Math.floor(Math.random() * Math.floor(messagesArray.length))];
 }
 
-const clickHandler = (onClickHandler: (message: String) => any ): void => {
+const clickHandler = (onClickHandler: (message: String) => (any) ): void => {
     const message = getMessage();
     onClickHandler(message.display)(message.display);
 }
