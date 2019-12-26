@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <img src={grover} alt="logo" />
         {showMessage &&
           <div>
-            HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            {showMessage}
           </div>
         }
         <div className="alert_button_container">

@@ -15,13 +15,13 @@ const messagesArray = [
     newYearsEveMessage
 ];
 
-const getAlert = () : Message => {
+const getMessage = () : Message => {
     return messagesArray[Math.floor(Math.random() * Math.floor(messagesArray.length))];
 }
 
 const clickHandler = (onClickHandler: (message: String) => any ): void => {
-    const message = getAlert();
-    console.log(onClickHandler(message.display)(message.display));
+    const message = getMessage();
+    onClickHandler(message.display)(message.display);
 }
 
 type AlertProps = {
