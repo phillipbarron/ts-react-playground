@@ -34,7 +34,7 @@ const AlertButton: React.FC<AlertProps> =
             className="btn btn-primary" 
             onClick={() => clickHandler(click)}
         >
-            CLICK ME - DO IT!
+            CLICK ME - DO IT! - DO IT NOW!!!!!
         </button>
 
 export default AlertButton;
