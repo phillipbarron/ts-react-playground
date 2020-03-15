@@ -34,7 +34,7 @@ const AlertButton: React.FC<AlertProps> =
             className="btn btn-primary" 
             onClick={() => clickHandler(click)}
         >
-            this is of no use at all
+            What is the point of anything
         </button>
 
 export default AlertButton;
